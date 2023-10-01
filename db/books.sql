@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS books_db;
+
+CREATE DATABASE books_db;
+
 -- Create a table for books
 CREATE TABLE books (
     id SERIAL PRIMARY KEY,

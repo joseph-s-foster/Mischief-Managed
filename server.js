@@ -6,7 +6,7 @@ const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ defaultLayout: "main", extname: '.hbs', helpers: helpers });
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+console.log('tutor')
 const app = express();
 const PORT = process.env.PORT || 3001;
 

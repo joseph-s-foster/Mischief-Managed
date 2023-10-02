@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tech Blog!</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/public/css/jass.css" />
+		<link rel="stylesheet" href="/public/css/style.css" />
+	</head>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="star">✨</span>
-        <a href="/">Tech Blog!</a>
-      </h1>
-      <nav>
-        <a href="/dashboard">Dashboard</a> ||
-        {{!-- TODO: dont show login if user logged in --}}
-        {{#if loggedIn}}
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+	<body>
+		<div class="flex-column justify-space-around">
+			<header class="display-flex justify-space-between align-center p-2">
+				<h1>
+					<a href="/">Mischief Managed</a>
+				</h1>
+				<nav>
+					<a href="/dashboard">Dashboard</a>
+					||
+					{{! TODO: dont show login if user logged in }}
+					{{#if loggedIn}}
+						<button class="no-button" id="logout">Logout</button>
+					{{else}}
+						<a href="/login">Login</a>
+					{{/if}}
 
+				</nav>
+			</header>
+			<main class="container container-fluid mt-5">
+				<!-- Render the sub layout -->
+				{{{body}}}
+			</main>
+			<footer>
 
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
+			</footer>
+		</div>
 
-    </footer>
-  </div>
+		{{#if loggedIn}}
+			<script src="/js/logout.js"></script>
+		{{/if}}
 
-
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-
-
-</body>
+	</body>
 
 </html>

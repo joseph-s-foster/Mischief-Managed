@@ -10,30 +10,40 @@ class User extends Model {
 
 User.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
+    user_id: {
+      type: Sequelize.INTEGER,
       autoIncrement: true,
+      primaryKey: true,
     },
     username: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING(50),
+      allowNull: false,
+    },
+    password_hash: {
+      type: Sequelize.STRING(255),
       allowNull: false,
     },
     email: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING(100),
       allowNull: false,
       unique: true,
-      validate: {
-        isEmail: true,
-      },
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
+    full_name: {
+      type: Sequelize.STRING(100),
+    },
+    date_of_birth: {
+      type: Sequelize.DATE,
+    },
+    registration_date: {
+      type: Sequelize.DATE,
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+    },
+    last_login: {
+      type: Sequelize.DATE,
+    },
+    is_active: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: true,
     },
   },
   {

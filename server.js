@@ -6,6 +6,7 @@ const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ defaultLayout: "main", extname: '.hbs', helpers: helpers });
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const passport = require('passport');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -24,6 +25,8 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(passport.initialize());
+app.use(passport.session());
 // Inform Express.js on which template engine to use
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

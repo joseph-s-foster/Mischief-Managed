@@ -17,7 +17,7 @@ CREATE TABLE trivia (
     FOREIGN KEY (book_id) REFERENCES books(id)
 );
 
--- Insert data for the books
+-- Insert data for the book titles
 INSERT INTO books (title)
 VALUES
     ('Harry Potter and the Sorcerer’s Stone'),

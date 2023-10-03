@@ -3,6 +3,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const { User } = require('../../models');
 
+
 // Configure Passport to use the LocalStrategy
 passport.use(
   new LocalStrategy(
@@ -20,7 +21,7 @@ passport.use(
           });
         }
 
-        const validPassword = await user.checkPassword(password);
+        const validPassword = await bcrypt.compare(password);
 
         if (!validPassword) {
           return done(null, false, {

@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const { User, Post, Comment } = require('../models');
-
+// TODO: refactor and rename to fit project
 const userData = require('./user_data.json');
 const postData = require('./postdata.json');
 const commentData = require('./comment_data.json');

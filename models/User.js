@@ -11,38 +11,38 @@ class User extends Model {
 User.init(
   {
     user_id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
     username: {
-      type: Sequelize.STRING(50),
+      type: DataTypes.STRING(50),
       allowNull: false,
     },
     password_hash: {
-      type: Sequelize.STRING(255),
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     email: {
-      type: Sequelize.STRING(100),
+      type: DataTypes.STRING(100),
       allowNull: false,
       unique: true,
     },
     full_name: {
-      type: Sequelize.STRING(100),
+      type: DataTypes.STRING(100),
     },
     date_of_birth: {
-      type: Sequelize.DATE,
+      type: DataTypes.DATE,
     },
-    registration_date: {
-      type: Sequelize.DATE,
-      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-    },
+    // registration_date: {
+    //   type: DataTypes.DATE,
+    //   defaultValue: literal('CURRENT_TIMESTAMP'),
+    // },
     last_login: {
-      type: Sequelize.DATE,
+      type: DataTypes.DATE,
     },
     is_active: {
-      type: Sequelize.BOOLEAN,
+      type: DataTypes.BOOLEAN,
       defaultValue: true,
     },
   },
@@ -57,7 +57,6 @@ User.init(
       //   return updatedUserData;
       // },
     },
-    sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,

@@ -1,17 +1,32 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { User, books } = require('../../models');
 
 // TODO: refactor and rename to fit project
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const newProject = await Project.create({
-      ...req.body,
-      user_id: req.session.user_id,
+    const bookData = await books.findAll({
+      include: [{ model: User}],
+    });
+    res.status(200).json(bookData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  try {
+    const bookData = await books.findByPk(req.params.id, {
+      include: [{ model: User}],
     });
 
-    res.status(200).json(newProject);
+    if (!bookData) {
+      res.status(404).json({ message: 'No book found with that id!'})
+      return;
+    }
+
+    res.status(200).json(bookData);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 

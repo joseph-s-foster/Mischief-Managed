@@ -1,7 +1,7 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
-
+// TODO refactor to reflect our project
 User.hasMany(Post, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'

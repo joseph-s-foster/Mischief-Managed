@@ -1,7 +1,7 @@
 body {
     font-family: "Bigelow Rules", cursive;
     font-size: 2rem;
-    background-image: url("/desktop_login.png");
+    background-image: url("/assets/backgrounds/mobile_session.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

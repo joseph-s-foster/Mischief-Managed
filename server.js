@@ -7,6 +7,7 @@ const hbs = exphbs.create({ defaultLayout: "main", extname: '.hbs', helpers: hel
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const passport = require('passport');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -32,6 +33,13 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public/css/', (req, res, next) => {
+  res.setHeader('Content-Type', 'text/css');
+  next();
+});
+
+
 
 app.use(routes);
 app.use('/user', routes);

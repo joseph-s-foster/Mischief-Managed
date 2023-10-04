@@ -2,13 +2,14 @@ const User = require('./User');
 const Book = require('./book');
 const Trivia = require('./trivia');
 // TODO refactor to reflect our project
-User.hasMany(Trivia, {
+User.belongsToMany(Trivia, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  through: UserTrivia,
 });
 
-Trivia.belongsTo(User, {
-  foreignKey: 'user_id'
+Trivia.belongsToMany(User, {
+  foreignKey: 'trivia_id',
+  through: UserTrivia
 });
 
 Book.hasMany(Trivia, {

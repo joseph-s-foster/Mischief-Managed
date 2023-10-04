@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class User extends Model {
   checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
+    return bcrypt.compareSync(loginPw, this.password_hash);
   }
 }
 
@@ -49,7 +49,7 @@ User.init(
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.password_hash = await bcrypt.hash(newUserData.password_hash, 10);
         return newUserData;
       },
       // beforeUpdate: async (updatedUserData) => {

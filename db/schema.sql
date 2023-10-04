@@ -1,3 +1,2 @@
-DROP DATABASE IF EXISTS user_db;
-CREATE DATABASE user_db;
-
+DROP DATABASE IF EXISTS mischief_managed_db;
+CREATE DATABASE mischief_managed_db;

@@ -1,23 +1,53 @@
 		<div class="container">
 			<div class="form-container">
-				<form>
+				<form class = "login-form">
 					<div class="form-group">
 						<input
 							type="text"
-							id="username"
-							placeholder="username"
+							id="email-login"
+							placeholder="email"
 							required />
 					</div>
 					<div class="form-group">
 						<input
 							type="password"
-							id="password"
+							id="password-login"
 							placeholder="password"
 							required />
 					</div>
 					<div class="form-group">
-						<button type="button" id="login">Login</button>
-						<button type="submit" id="newAccount">Create Account</button>
+						<button type="submit" id="login">Login</button>
+						{{!-- <button type="submit" id="newAccount">Create Account</button> --}}
 					</div>
 				</form>
 			</div>
+			<div class="form-container">
+				<form class= "signup-form">
+					<div class="form-group">
+						<input
+							type="text"
+							id="username-signup"
+							placeholder="username"
+							required />
+					</div>
+					<div class="form-group">
+						<input
+							type="text"
+							id="email-signup"
+							placeholder="email"
+							required />
+					</div>
+					<div class="form-group">
+						<input
+							type="password"
+							id="password-signup"
+							placeholder="password"
+							required />
+					</div>
+					<div class="form-group">
+						<button type="submit" id="signup">Sign Up</button>
+						{{!-- <button type="submit" id="newAccount">Create Account</button> --}}
+					</div>
+				</form>
+			</div>
+			<script src='/js/login.js'></script>

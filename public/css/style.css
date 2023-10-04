@@ -1,11 +1,22 @@
 body {
     font-family: "Bigelow Rules", cursive;
     font-size: 2rem;
-    background-image: url("/assets/backgrounds/mobile_session.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+}
+
+.title {
+    padding-top: 50px;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.fixed-image {
+    position: fixed;
+    z-index: -1000;
+    height: auto;
+    width: 100%;
+    opacity: 80%;
 }
 
 .container {

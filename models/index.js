@@ -1,6 +1,7 @@
 const User = require('./User');
 const Book = require('./book');
 const Trivia = require('./trivia');
+const UserTrivia = require('./user_trivia');
 // TODO refactor to reflect our project
 User.belongsToMany(Trivia, {
   foreignKey: 'user_id',
@@ -21,4 +22,4 @@ Trivia.belongsTo(Book, {
   foreignKey: 'book_id'
 });
 
-module.exports = { User, Book, Trivia };
+module.exports = { User, Book, Trivia, UserTrivia };

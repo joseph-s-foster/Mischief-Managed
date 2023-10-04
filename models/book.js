@@ -5,17 +5,13 @@ class Book extends Model {}
 
 Book.init(
   {
-    book_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    trivia: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
@@ -26,13 +22,17 @@ Book.init(
     //     key: 'id',
     //   },
     // },
+    image: {
+      type: DataTypes.BLOB,
+      allowNull: true
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'books',
+    modelName: 'book',
   }
 );
 

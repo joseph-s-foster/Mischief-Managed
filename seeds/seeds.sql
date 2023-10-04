@@ -1,33 +1,34 @@
 
--- Create a table for books
-CREATE TABLE books (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255)
-);
+--  -- Create a table for books
+--  CREATE TABLE books (
+--      id SERIAL PRIMARY KEY,
+--      title VARCHAR(255)
+--      image
+--  );
 
--- Create a table for trivia
-CREATE TABLE trivia (
-    id SERIAL PRIMARY KEY,
-    book_id INT,
-    percentage INT,
-    content TEXT,
-    FOREIGN KEY (book_id) REFERENCES books(id)
-);
-
+--  -- Create a table for trivia
+--  CREATE TABLE trivia (
+--      id SERIAL PRIMARY KEY,
+--      book_id INT,
+--      percentage INT,
+--      content TEXT,
+--      FOREIGN KEY (book_id) REFERENCES books(id)
+-- );
+use mischief_managed_db;
 -- Insert data for the book titles
-INSERT INTO books (title)
+INSERT INTO book (title, image)
 VALUES
-    ('Harry Potter and the Sorcerer’s Stone'),
-    ('Harry Potter and the Chamber of Secrets'),
-    ('Harry Potter and the Prisoner of Azkaban'),
-    ('Harry Potter and the Goblet of Fire'),
-    ('Harry Potter and the Order of the Phoenix'),
-    ('Harry Potter and the Half-Blood Prince'),
-    ('Harry Potter and the Deathly Hallows');
+    ('Harry Potter and the Sorcerer’s Stone', "/assets/covers/sorcerers_stone.png"),
+    ('Harry Potter and the Chamber of Secrets', "/assets/covers/chamber_of_secrets.png"),
+    ('Harry Potter and the Prisoner of Azkaban', "/assets/covers/prisoner_of_azkaban.png"),
+    ('Harry Potter and the Goblet of Fire', "/assets/covers/goblet_of_fire.png"),
+    ('Harry Potter and the Order of the Phoenix', "/assets/covers/order_of_the_phoenix.png"),
+    ('Harry Potter and the Half-Blood Prince', "/assets/covers/half_blood_prince.png"),
+    ('Harry Potter and the Deathly Hallows', "/assets/covers/half_blood_prince.png");
 
 -- Insert data for trivia
 -- For each book, insert multiple rows corresponding to different percentages
-INSERT INTO trivia (book_id, percentage, content)
+INSERT INTO trivia (book_id, trivia, content)
 VALUES
     (1, 25, 'The book was originally released in 1997 under the title, Harry Potter and the Philosopher’s Stone.'),
     (1, 50, 'J.K. Rowling began writing the first novel of the series in 1990.'),

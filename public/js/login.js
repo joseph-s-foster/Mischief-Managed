@@ -39,13 +39,11 @@ const loginFormHandler = async (event) => {
       }
     }
   };
-  
-  console.log("test");
 
   document
-    .querySelector('#login-form')
-    .addEventListener('submit', loginFormHandler);
+    .querySelector('#login')
+    .addEventListener('click', loginFormHandler);
   
   document
-    .querySelector('#login-form')
-    .addEventListener('submit', signupFormHandler);
+    .querySelector('#signup')
+    .addEventListener('click', signupFormHandler);

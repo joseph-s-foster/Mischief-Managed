@@ -15,10 +15,6 @@ User.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    username: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-    },
     password_hash: {
       type: DataTypes.STRING(255),
       allowNull: false,

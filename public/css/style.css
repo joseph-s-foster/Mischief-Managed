@@ -4,8 +4,9 @@ body {
 }
 
 .title {
-    padding-top: 50px;
+    padding-top: 8%;
     font-size: 8rem;
+    color: #ffbf00;
     display: flex;
     justify-content: center;
     z-index: 1000;
@@ -16,14 +17,12 @@ body {
     z-index: -1000;
     height: auto;
     width: 100%;
-    opacity: 80%;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .form-container {
@@ -34,7 +33,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     margin: 5px;
     border-radius: 10px;
-    background-color: rgb(106, 31, 4);
+    background-color: #05061741;
     opacity: 90%;
 }
 
@@ -68,13 +67,21 @@ input[type="password"]::placeholder {
 }
 
 .form-group button {
-    background-color: #321e10;
-    color: #fff;
+    background-color: #ffbf00;
+    color: #000;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 7px;
 }
+
+.fa-google {
+    background: conic-gradient(from -45deg, #EA4335 110deg, #4285F4 90deg 180deg, #34A853 180deg 270deg, #FBBC05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+ }
 
 @media screen and (max-width: 768px) {
     body {

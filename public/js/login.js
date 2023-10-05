@@ -1,6 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-  
+    console.log("test");
     const email = document.querySelector('#email-login').value.trim();
     const password_hash = document.querySelector('#password-login').value.trim();
   
@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/session');
       } else {
         alert('Failed to log in.');
       }
@@ -40,10 +40,12 @@ const loginFormHandler = async (event) => {
     }
   };
   
+  console.log("test");
+
   document
-    .querySelector('#login')
+    .querySelector('#login-form')
     .addEventListener('submit', loginFormHandler);
   
   document
-    .querySelector('#signup')
+    .querySelector('#login-form')
     .addEventListener('submit', signupFormHandler);

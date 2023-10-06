@@ -20,7 +20,7 @@ const seedDatabase = async () => {
 
   await UserTrivia.bulkCreate(UserTriviaData);
 
-  console.log("Seeding done!");
+  console.log("Wow, you got something to work for once...");
 
   process.exit(0);
 };

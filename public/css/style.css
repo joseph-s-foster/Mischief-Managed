@@ -4,7 +4,7 @@ body {
 }
 
 .title {
-	padding-top: 8%;
+	padding-top: 5%;
 	font-size: 8rem;
 	color: #ffbf00;
 	display: flex;
@@ -15,7 +15,7 @@ body {
 .fixed-image {
 	position: fixed;
 	z-index: -1000;
-	height: auto;
+	height: 100%;
 	width: 100%;
 }
 
@@ -99,6 +99,35 @@ input[type="password"]::placeholder {
 	-webkit-text-fill-color: transparent;
 }
 
+.books {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
 .book-cover {
-	width: 20%;
+	width: 75%;
+	border-radius: 10px;
+	box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
+}
+
+#logoutBtn {
+	margin-top: 30px;
+}
+
+.books:first-child {
+	margin-left: 3%;
+}
+
+@media screen and (max-width: 768px) {
+	.books {
+		width: 75%;
+		flex-direction: column;
+		align-items: center;
+			}
+	.book-cover {
+		margin-top: 15px;
+		margin-left: 30%;
+
+	}
 }

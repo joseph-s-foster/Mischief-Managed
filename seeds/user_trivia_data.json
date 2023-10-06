@@ -1,0 +1,22 @@
+[
+    {
+        "user_id": 1,
+        "trivia_id": 0
+    },
+    {
+        "user_id": 1,
+        "trivia_id": 25
+    },
+    {
+        "user_id": 1,
+        "trivia_id": 50
+    },
+    {
+        "user_id": 1,
+        "trivia_id": 75
+    },
+    {
+        "user_id": 1,
+        "trivia_id": 100
+    }
+]

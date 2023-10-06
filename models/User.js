@@ -24,16 +24,6 @@ User.init(
       allowNull: false,
       unique: true,
     },
-    full_name: {
-      type: DataTypes.STRING(100),
-    },
-    date_of_birth: {
-      type: DataTypes.DATE,
-    },
-    // registration_date: {
-    //   type: DataTypes.DATE,
-    //   defaultValue: literal('CURRENT_TIMESTAMP'),
-    // },
     last_login: {
       type: DataTypes.DATE,
     },

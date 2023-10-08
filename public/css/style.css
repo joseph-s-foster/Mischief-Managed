@@ -105,6 +105,13 @@ input[type="password"]::placeholder {
 	flex-wrap: nowrap;
 }
 
+.books-single {
+	display: flex;
+	justify-content: left;
+	margin-left: 48px;
+	width: 25%;
+}
+
 .book-cover {
 	width: 75%;
 	border-radius: 10px;

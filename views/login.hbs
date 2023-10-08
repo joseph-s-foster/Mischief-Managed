@@ -5,20 +5,21 @@
 						<input
 							type="text"
 							id="email-login"
-							placeholder="email"
+							placeholder="Email"
 							required />
 					</div>
 					<div class="form-group">
 						<input
 							type="password"
 							id="password-login"
-							placeholder="password"
+							placeholder="Password"
 							required />
 					</div>
 					<div class="form-group">
-						<button type="submit" id="login">Login</button>
-
-						<button type="submit" id="signup">Sign Up</button>
+						<div class="button-container">
+						<button class="login" type="submit" id="login">Login</button>
+						<button class="signup" type="submit" id="signup">Sign Up</button>
+						</div>
 						{{!-- <button type="submit" id="newAccount">Create Account</button> --}}
 					<button id="google-btn"><a href='/auth/google' id="google-login" className='btn btn-block btn-social btn-reddit ml-3'>
                <span className='fa fa-google'></span>
@@ -28,37 +29,5 @@
 					</div>
 				</form>
 			</div>
-			{{!-- <div class="form-container">
-				<form class= "signup-form">
-					<div class="form-group">
-						<input
-							type="text"
-							id="username-signup"
-							placeholder="username"
-							required />
-					</div>
-					<div class="form-group">
-						<input
-							type="text"
-							id="email-signup"
-							placeholder="email"
-							required />
-					</div>
-					<div class="form-group">
-						<input
-							type="password"
-							id="password-signup"
-							placeholder="password"
-							required />
-					</div>
-					<div class="form-group">
-						<button type="submit" id="signup">Sign Up</button>
-						<a href='/auth/google' className='btn btn-block btn-social btn-reddit ml-3'>
-               <span className='fa fa-google'></span>
-             Sign up with Google
-             </a>
-						{{!-- <button type="submit" id="newAccount">Create Account</button> --}}
-					</div>
-				</form>
-			</div> --}}
+
 			<script src='/js/login.js'></script>

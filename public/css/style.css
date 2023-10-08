@@ -58,11 +58,22 @@ body {
 	border-radius: 5px;
 }
 
+.form-group .button-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .form-group .button-container button {
+	width: 48%; /* Adjust width as needed */
+  }
+
+
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-	color: #1b1616;
+	color: #504f4f;
 	font-family: "Bigelow Rules", sans-serif;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	padding-top: 7px;
 }
 
@@ -75,8 +86,25 @@ input[type="password"]::placeholder {
 	border-radius: 7px;
 }
 
+#login {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-left: 5%;
+	width: 44%;
+}
+
+#signup {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-right: 5%;
+	width: 44%;
+}
+
 #google-btn {
-	margin-top: 5px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-top: 20px;
+	width: 90%;
 }
 
 #google-login {
@@ -121,6 +149,31 @@ input[type="password"]::placeholder {
 #logoutBtn {
 	margin-top: 30px;
 }
+
+#logout {
+	position: absolute;
+	top: 15px; /* Adjust this value to position the button from the top */
+	right: 15px; /* Adjust this value to position the button from the right */
+  }
+
+.logout {
+	border: none;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+#back {
+	position: absolute;
+	top: 15px; /* Adjust this value to position the button from the top */
+	left: 15px; /* Adjust this value to position the button from the left */
+  }
+  
+  .back {
+	border: none;
+	cursor: pointer;
+	border-radius: 7px;
+  }
+  
 
 .books:first-child {
 	margin-left: 3%;

@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User, books } = require('../../models');
+const { User, Book } = require('../../models');
+const sessionRoutes = require('./session');
 
 // TODO: refactor and rename to fit project
 router.get('/', async (req, res) => {
@@ -49,5 +50,6 @@ router.get('/:id', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+router.use('/session', sessionRoutes);
 
 module.exports = router;

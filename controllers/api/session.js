@@ -22,4 +22,12 @@ router.get('/session', async (req, res) => {
   }
 });
 
+router.get('/:id', (req, res) => {
+  const id = req.params.id;
+  // Handle the request for this specific ID (e.g., redirect to the appropriate page)
+  // In this example, we'll just send a response indicating the requested ID
+  res.send(`You requested session with ID ${id}`);
+});
+
+
 module.exports = router;

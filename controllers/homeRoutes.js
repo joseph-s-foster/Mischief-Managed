@@ -32,15 +32,15 @@ router.get('/session', async (req, res) => {
   }
 });
 
-// router.post('/session', async (req, res) => {
-//   try {
-//     // Handle form submission logic here
-//     // For example, you can update user session based on form data
-//     req.session.logged_in = true;
-//     res.redirect('/session'); // Redirect to the session page after form submission
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+router.post('/session', async (req, res) => {
+  try {
+    // Handle form submission logic here
+    // For example, you can update user session based on form data
+    req.session.logged_in = true;
+    res.redirect('/session'); // Redirect to the session page after form submission
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

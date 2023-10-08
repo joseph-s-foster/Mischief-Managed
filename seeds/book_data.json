@@ -2,36 +2,36 @@
   {
     "id": 1,
     "title": "Harry Potter and the Sorcerer’s Stone",
-    "image": "/assets/covers/sorcerers_stone.png"
+    "image": "/covers/sorcerers_stone.png"
   },
   {
     "id": 2,
     "title": "Harry Potter and the Chamber of Secrets",
-    "image": "/assets/covers/chamber_of_secrets.png"
+    "image": "/covers/chamber_of_secrets.png"
   },
   {
     "id": 3,
     "title": "Harry Potter and the Prisoner of Azkaban",
-    "image": "/assets/covers/prisoner_of_azkaban.png"
+    "image": "/covers/prisoner_of_azkaban.png"
   },
   {
     "id": 4,
     "title": "Harry Potter and the Goblet of Fire",
-    "image": "/assets/covers/goblet_of_fire.png"
+    "image": "/covers/goblet_of_fire.png"
   },
   {
     "id": 5,
     "title": "Harry Potter and the Order of the Phoenix",
-    "image": "/assets/covers/order_of_the_phoenix.png"
+    "image": "/covers/order_of_the_phoenix.png"
   },
   {
     "id": 6,
     "title": "Harry Potter and the Half-Blood Prince",
-    "image": "/assets/covers/half_blood_prince.png"
+    "image": "/covers/half_blood_prince.png"
   },
   {
     "id": 7,
     "title": "Harry Potter and the Deathly Hallows",
-    "image": "/assets/covers/half_blood_prince.png"
+    "image": "/covers/deathly_hallows.png"
   }
 ]

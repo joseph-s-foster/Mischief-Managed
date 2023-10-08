@@ -16,9 +16,12 @@ router.get('/display/:id', async (req, res) => {
       return;
     }
 
+    console.log('Image URL:', bookData.image); // Log the image URL
+
     res.render('singleBook', {
       layout: 'main',
-      book: bookData,
+      title: bookData.title, // Pass the book title
+      image: bookData.image, // Pass the image URL
     });
   } catch (err) {
     res.status(500).json(err);

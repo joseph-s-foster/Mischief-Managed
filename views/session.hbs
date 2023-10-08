@@ -1,65 +1,14 @@
-<div class="books"><div>
-		<img
-			class="book-cover"
-			src="/covers/sorcerers_stone.png"
-			alt="Sorcerer's Stone book cover"
-		/>
+<div class="books">
+  {{#each books}}
+    <div>
+      <a href="http://localhost:3001/api/books/display/{{id}}">
+        <img class="book-cover" src="{{image}}" alt="{{title}} book cover" />
+      </a>
+    </div>
+  {{/each}}
+</div>
 
-	</div>
-
-	<div>
-		<img
-			class="book-cover"
-			src="/covers/chamber_of_secrets.png"
-			alt="Chamber of Secrets book cover"
-		/>
-
-	</div>
-
-	<div>
-		<img
-			class="book-cover"
-			src="/covers/prisoner_of_azkaban.png"
-			alt="Prisoner of Azkaban book cover"
-		/>
-
-	</div>
-
-	<div>
-		<img
-			class="book-cover"
-			src="/covers/goblet_of_fire.png"
-			alt="Goblet of Fire book cover"
-		/>
-
-	</div>
-
-	<div>
-		<img
-			class="book-cover"
-			src="/covers/order_of_the_phoenix.png"
-			alt="Order of the Phoenix book cover"
-		/>
-
-	</div>
-
-	<div>
-		<img
-			class="book-cover"
-			src="/covers/half_blood_prince.png"
-			alt="Half-Blood Prince book cover"
-		/>
-
-	</div>
-
-	<div>
-		<img
-			class="book-cover"
-			src="/covers/deathly_hallows.png"
-			alt="Deathly Hallows book cover"
-		/>
-	</div>
-	</div>
-
-	<div class="form-group" id="logout"><button>Log Out</button>
-		<button>Back</button></div>
+<div class="form-group" id="logout">
+  <button>Log Out</button>
+  <button>Back</button>
+</div>

@@ -1,53 +1,31 @@
-const router = require('express').Router();
-const { User, books } = require('../../models');
+const express = require('express');
+const router = express.Router();
+const { Book } = require('../../models');
+const sessionRoutes = require('./session');
 
-// TODO: refactor and rename to fit project
-router.get('/', async (req, res) => {
-  try {
-    const bookData = await books.findAll({
-      include: [{ model: User}],
-    });
-    res.status(200).json(bookData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// Include sessionRoutes
+router.use('/session', sessionRoutes);
 
-router.get('/:id', async (req, res) => {
+// Get a single book by ID
+router.get('/display/:id', async (req, res) => {
   try {
-    const bookData = await books.findByPk(req.params.id, {
-      include: [{ model: User}],
-    });
+    const bookData = await Book.findByPk(req.params.id);
 
     if (!bookData) {
-      res.status(404).json({ message: 'No book found with that id!'})
+      res.status(404).json({ message: 'No book found with that id!' });
       return;
     }
 
-    res.status(200).json(bookData);
+    console.log('Image URL:', bookData.image); // Log the image URL
+
+    res.render('singleBook', {
+      layout: 'main',
+      title: bookData.title, // Pass the book title
+      image: bookData.image, // Pass the image URL
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const projectData = await Project.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
-
-//     if (!projectData) {
-//       res.status(404).json({ message: 'No project found with this id!' });
-//       return;
-//     }
-
-//     res.status(200).json(projectData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;

@@ -15,15 +15,8 @@ Book.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
     image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING, // Changed to string type for image paths
       allowNull: true
     }
   },

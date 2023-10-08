@@ -14,31 +14,27 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'Super secret secret',
-  // cookie: {maxAge: 300000,
-  //   httpOnly: true,
-  //   secure: false,
-  //   sameSite: 'strict',},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
   })
 };
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 app.use(passport.initialize());
 app.use(passport.session());
-// Inform Express.js on which template engine to use
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
-
-
 app.use(routes);
-// app.use('/user', routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+

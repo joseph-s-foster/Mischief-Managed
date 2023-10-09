@@ -3,7 +3,7 @@ const loginFormHandler = async (event) => {
   console.log("test");
   const email = document.querySelector("#email-login").value.trim();
   const password_hash = document.querySelector("#password-login").value.trim();
-  const bcrypt = require('bcrypt');
+  
 
   if (email && password_hash) {
     const response = await fetch("/api/users/login", {

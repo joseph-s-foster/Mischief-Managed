@@ -37,7 +37,7 @@ const { User } = require('../../models');
 //   )
 // );
 
-// Serialize user data to store in the session
+// // Serialize user data to store in the session
 // passport.serializeUser((user, done) => {
 //   done(null, user.id);
 // });
@@ -55,33 +55,29 @@ const { User } = require('../../models');
 // User Registration Route
 router.post('/', async (req, res) => {
   try {
+    // Ensure that req.body contains 'password_hash' and 'email'
+    const { password_hash, email } = req.body;
+
+    // Create a new user with hashed password
     const userData = await User.create({
-      password_hash: req.body.password_hash,
-      email: req.body.email,
+      password_hash, // Assuming this is already hashed
+      email,
     });
 
+    // Save user data in the session
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.email = userData.email;
       req.session.logged_in = true;
 
+      // Respond with user data or a success message
       res.status(200).json(userData);
-     });
+    });
   } catch (err) {
-    console.log(err);
-    res.status(400).json(err.message);
+    console.error(err); // Log the error for debugging
+    res.status(400).json({ message: 'Failed to create a new user.' }); // Respond with an error message
   }
 });
-
-// User Login Route
-// router.post(
-//   '/login',
-//   passport.authenticate('local', {
-//     successRedirect: '/homepage', // Redirect on successful login
-//     failureRedirect: '/login', // Redirect on failed login
-//     failureFlash: true, // Enable flash messages for authentication errors
-//   })
-// );
 
 router.post('/login', async (req, res) => {
   try {

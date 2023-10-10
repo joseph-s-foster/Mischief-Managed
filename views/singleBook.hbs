@@ -3,7 +3,23 @@
 		<img class="book-cover" src="{{image}}" alt="{{title}} book cover" />
 	</div>
 
-	<div>
+<div>
+  <button class="dropbtn">Reading Progress</button>
+  <ul>
+    {{#each books}}
+      {{#ifEquals this.book_id currentBookId}}
+        <li class="dropdown">{{this.trivia}}%
+          <div class="dropdown-content">
+            <div>{{this.content}}</div>
+          </div>
+        </li>
+      {{/ifEquals}}
+    {{/each}}
+  </ul>
+</div>
+
+
+	{{!-- <div>
 		<button class="dropbtn">Reading Progress</button>
 		<ul>
       <li class="dropdown">0%
@@ -28,7 +44,7 @@
       </li>
     </ul>
     
-	</div>
+	</div> --}}
 
 	<div class="form-group" id="logout">
 		<button class="logout">Log Out</button>

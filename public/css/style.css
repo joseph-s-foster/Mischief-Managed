@@ -79,7 +79,7 @@ input[type="password"]::placeholder {
   padding-top: 7px;
 }
 
-.form-group button {
+.form-group button, .dropbtn {
   background-color: #ffbf00;
   color: #000;
   border: none;
@@ -151,6 +151,13 @@ input[type="password"]::placeholder {
   flex-wrap: nowrap;
 }
 
+.single-book-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .books-single {
   display: flex;
   justify-content: left;
@@ -161,7 +168,17 @@ input[type="password"]::placeholder {
 .book-cover {
   width: 75%;
   border-radius: 10px;
-  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
+  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);  
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #ffbf00;
+  border-radius: 10px;
+  margin-top: 2px;
 }
 
 #logoutBtn {

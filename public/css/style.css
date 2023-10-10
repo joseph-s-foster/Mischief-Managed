@@ -1,216 +1,234 @@
 body {
-  font-family: "Bigelow Rules", cursive;
-  font-size: 2rem;
+	font-family: "Bigelow Rules", cursive;
+	font-size: 2rem;
 }
 
 .title {
-  padding-top: 5%;
-  font-size: 8rem;
-  color: #ffbf00;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
+	padding-top: 5%;
+	font-size: 8rem;
+	color: #ffbf00;
+	display: flex;
+	justify-content: center;
+	z-index: 1000;
 }
 
 .fixed-image {
-  position: fixed;
-  z-index: -1000;
-  height: 100%;
-  width: 100%;
+	position: fixed;
+	z-index: -1000;
+	height: 100%;
+	width: 100%;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin: 5px;
-  border-radius: 10px;
-  background-color: #05061741;
-  opacity: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	margin: 5px;
+	border-radius: 10px;
+	background-color: #05061741;
+	opacity: 90%;
 }
 
 .form-container form {
-  width: 300px;
+	width: 300px;
 }
 
 .form-group {
-  margin-bottom: 15px;
-  text-align: center;
+	margin-bottom: 15px;
+	text-align: center;
 }
 
 .form-group label {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .form-group input {
-  width: 90%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+	width: 90%;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
 .form-group .button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px; /* Adjust margin as needed */
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px; /* Adjust margin as needed */
 }
 
 .form-group .button-container button {
-  width: 48%;
-  height: 54px; /* Adjust height to match the input field */
-  padding: 10px; /* Adjust padding for vertical centering */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+	width: 48%;
+	height: 54px; /* Adjust height to match the input field */
+	padding: 10px; /* Adjust padding for vertical centering */
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-  color: #504f4f;
-  font-family: "Bigelow Rules", sans-serif;
-  font-size: 2.5rem;
-  padding-top: 7px;
+	color: #504f4f;
+	font-family: "Bigelow Rules", sans-serif;
+	font-size: 2.5rem;
+	padding-top: 7px;
 }
 
 .form-group button {
-  background-color: #ffbf00;
-  color: #000;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 7px;
+	background-color: #ffbf00;
+	color: #000;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 7px;
 }
 
 #login,
 #signup {
-  font-size: 2.5rem;
-  font-weight: bold;
-  height: 54px; /* Adjust height to match the input field */
-  padding: 10px; /* Adjust padding for vertical centering */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	height: 54px; /* Adjust height to match the input field */
+	padding: 10px; /* Adjust padding for vertical centering */
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #login {
-  margin-left: 5%;
-  width: 44%;
+	margin-left: 5%;
+	width: 44%;
 }
 
 #signup {
-  margin-right: 5%;
-  width: 44%;
+	margin-right: 5%;
+	width: 44%;
 }
 
 #google-btn {
-  margin-left: 5%;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 20px;
-  width: 90%;
-  height: 54px; /* Adjust height to match the input field */
-  padding: 10px;
-  padding-left: 0; /* Adjust padding for vertical centering */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	margin-left: 5%;
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-top: 20px;
+	width: 90%;
+	height: 54px; /* Adjust height to match the input field */
+	padding: 10px;
+	padding-left: 0; /* Adjust padding for vertical centering */
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #google-login {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
 
 .fa-google {
-  background: conic-gradient(
-      from -45deg,
-      #ea4335 110deg,
-      #4285f4 90deg 180deg,
-      #34a853 180deg 270deg,
-      #fbbc05 270deg
-    )
-    73% 55%/150% 150% no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+	background: conic-gradient(
+			from -45deg,
+			#ea4335 110deg,
+			#4285f4 90deg 180deg,
+			#34a853 180deg 270deg,
+			#fbbc05 270deg
+		)
+		73% 55%/150% 150% no-repeat;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
 }
 
 .books {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: nowrap;
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: nowrap;
 }
 
 .books-single {
-  display: flex;
-  justify-content: left;
-  margin-left: 48px;
-  width: 21%;
+	display: flex;
+	justify-content: left;
+	margin-left: 48px;
+	width: 21%;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.dropdown {
+	margin-left: 20px;
 }
 
 .book-cover {
-  width: 75%;
-  border-radius: 10px;
-  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
+	width: 75%;
+	border-radius: 10px;
+	box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
 }
 
 #logoutBtn {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 #logout {
-  position: absolute;
-  top: 15px; /* Adjust this value to position the button from the top */
-  right: 15px; /* Adjust this value to position the button from the right */
+	position: absolute;
+	top: 15px; /* Adjust this value to position the button from the top */
+	right: 15px; /* Adjust this value to position the button from the right */
 }
 
 .logout {
-  height: 54px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: 7px;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	height: 54px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: 7px;
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #back {
-  position: absolute;
-  top: 15px; /* Adjust this value to position the button from the top */
-  left: 15px; /* Adjust this value to position the button from the left */
+	position: absolute;
+	top: 15px; /* Adjust this value to position the button from the top */
+	left: 15px; /* Adjust this value to position the button from the left */
 }
 
 .back {
-  border: none;
-  cursor: pointer;
-  border-radius: 7px;
+	border: none;
+	cursor: pointer;
+	border-radius: 7px;
 }
 
 .books:first-child {
-  margin-left: 3%;
+	margin-left: 3%;
 }
 
 @media screen and (max-width: 768px) {
-  .books {
-    width: 75%;
+	.books {
+		width: 75%;
+		flex-direction: column;
+		align-items: center;
+	}
+	.book-cover {
+		margin-top: 15px;
+		margin-left: 30%;
+	}
+
+  .container {
     flex-direction: column;
-    align-items: center;
-  }
-  .book-cover {
-    margin-top: 15px;
-    margin-left: 30%;
-  }
+    }
+
+    .dropdown {
+      margin-top: 20px;
+      margin-left: 30%;
+    }
 }

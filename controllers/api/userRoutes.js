@@ -1,56 +1,7 @@
 const router = require('express').Router();
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
 const { User } = require('../../models');
 
-
-// Configure Passport to use the LocalStrategy
-// passport.use(
-//   new LocalStrategy(
-//     {
-//       usernameField: 'email',
-//       passwordField: 'password_hash',
-//     },
-//     async (email, password_hash, done) => {
-//       try {
-//         const user = await User.findOne({ where: { email } });
-
-//         if (!user) {
-//           return done(null, false, {
-//             message: 'Incorrect email or password, please try again',
-//           });
-//         }
-
-//         const validPassword = await bcrypt.compare(password_hash);
-
-//         if (!validPassword) {
-//           return done(null, false, {
-//             message: 'Incorrect email or password, please try again',
-//           });
-//         }
-
-//         return done(null, user);
-//       } catch (err) {
-//         return done(err);
-//       }
-//     }
-//   )
-// );
-
-// // Serialize user data to store in the session
-// passport.serializeUser((user, done) => {
-//   done(null, user.id);
-// });
-
-// // Deserialize user data from the session
-// passport.deserializeUser(async (id, done) => {
-//   try {
-//     const user = await User.findByPk(id);
-//     done(null, user);
-//   } catch (err) {
-//     done(err);
-//   }
-// });
 
 // User Registration Route
 router.post('/', async (req, res) => {
@@ -111,6 +62,7 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 // User Logout Route
 router.post('/logout', (req, res) => {

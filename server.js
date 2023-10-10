@@ -6,8 +6,9 @@ const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ defaultLayout: "main", extname: '.hbs', helpers: helpers });
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const passport = require('passport');
 const path = require('path');
+const passport = require('passport');
+require('./config/passport');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,18 +22,33 @@ const sess = {
   })
 };
 
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(session(sess));
-app.use(passport.initialize());
-app.use(passport.session());
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 app.use(routes);
+
+app.get('/auth/google', 
+  passport.authenticate('google', {
+    scope:
+    ['email']
+  }
+));
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', {
+    failureRedirect: '/login', 
+  }),
+  function (req, res) {
+    res.redirect('/session')
+  }
+);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/session', async (req, res) => {
+router.get('/session', withAuth, async (req, res) => {
   try {
     // Assuming you retrieve these data from your database or source
     const loggedIn = req.session.logged_in;

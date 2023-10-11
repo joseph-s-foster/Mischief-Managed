@@ -171,6 +171,7 @@ input[type="password"]::placeholder {
   width: 75%;
   border-radius: 10px;
   box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);  
+  transition: transform 0.2s;
 }
 .tooltip {
   font-size: 14px;
@@ -192,6 +193,31 @@ input[type="password"]::placeholder {
   opacity: 1;
 }
 
+
+
+.book-cover:hover {
+  transform: scale(1.1); /* Enlarge the image when hovered */
+}
+
+.tooltip {
+  font-family: sans-serif;
+  font-size: 14px;
+  position: absolute;
+  display: none;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 100; /* Make sure it has a higher z-index */
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Apply the hover effect to the parent element */
+.books a:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
 
 
 .dropdown {

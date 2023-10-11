@@ -1,6 +1,7 @@
 body {
   font-family: "Bigelow Rules", cursive;
   font-size: 2rem;
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=26747'), auto;
 }
 
 .title {
@@ -132,21 +133,6 @@ input[type="password"]::placeholder {
   color: black;
 }
 
-.fa-google {
-  background: conic-gradient(
-      from -45deg,
-      #ea4335 110deg,
-      #4285f4 90deg 180deg,
-      #34a853 180deg 270deg,
-      #fbbc05 270deg
-    )
-    73% 55%/150% 150% no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
 .books {
   margin-top: 30px;
   display: flex;
@@ -268,6 +254,51 @@ input[type="password"]::placeholder {
 
 .books:first-child {
   margin-left: 3%;
+}
+
+.google-btn {
+  margin: 25px;
+  width: 80%;
+  min-width: 184px;
+  max-width: 184px;
+  height: 42px;
+  background-color: #fcfcfc;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(66, 52, 52, 0.2);
+  cursor: pointer;
+  cursor: hand;
+  align-self: center;
+  user-select: none;
+  transition: all 400ms ease 0s;
+  display: flex;
+}
+
+.google-btn .google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: -18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  user-select: none
+}
+.google-btn .google-icon-svg {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  margin-right: 20px;
+  width: 18px;
+  height: 18px;
+  user-select: none
+}
+.google-btn .btn-text {
+  float: right;
+  margin: 15px 24px 49px 57px;
+  color: #757575;
+  font-size: 14px;
+  letter-spacing: .2px;
+  font-family: Roboto;
+  user-select: none
 }
 
 @media screen and (max-width: 768px) {

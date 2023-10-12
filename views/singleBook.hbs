@@ -4,7 +4,7 @@
   </div>
 
   <div>
-    <button class="dropbtn">Reading Progress</button>
+    <button class="dropbtn custom-cursor">Reading Progress</button>
     <ul>
       {{!-- {{#each books}}
       {{#ifEquals this.book_id currentBookId}}
@@ -17,7 +17,7 @@
       {{/each}} --}}
       <input id='book-id' type="hidden" value="{{id}}" />
       <span class="clr">Select Milestone: </span>
-      <select id="milestone">
+      <select id="milestone" class="custom-cursor">
         <option value="">Select</option>
         {{#each milestoneTrivia}}
 

@@ -21,17 +21,21 @@ This application allows users to log their progress through the Harry Potter boo
 
 - Node.js 
 - Express.js  
+- Passport.js
+- Passport-google-oauth20
 - Sequelize/MySQL
 - Handlebars
+- Bcrypt
+ 
 
 ## Usage
 
-When the user creates an account and logs in,
-Then the user is presented with all 7 Harry Potter titles and the ability to log their read completion percentage for each title.
-When the completion percentage is logged,
-Then trivia facts for the corresponding title are displayed for each 25% completion milestone.
-When the user is done using the application,
-Then the user can log out and end the session.
+* When the user creates an account and logs in,
+* Then the user is presented with all 7 Harry Potter titles and the ability to log their read completion percentage for each title.
+* When the completion percentage is logged,
+* Then trivia facts for the corresponding title are displayed for each 25% completion milestone.
+* When the user is done using the application,
+* Then the user can log out and end the session.
 
 
 ## Credits
@@ -46,10 +50,6 @@ Then the user can log out and end the session.
 This project is licensed under the MIT License.  See License for details.
 
 ## Contact
-Joe Foster:
-* email
-* LinkedIn
-* GitHub
 
 Erin Hamrick:  
  * erin.hamrick76@gmail.com 
@@ -57,22 +57,23 @@ Erin Hamrick:
  * https://github.com/ErinHamrick
 
 
-Molly Starnes
-* email
-* LinkedIn
-* GitHub
+Molly Starnes:
+* mstrnes2@gmail.com
+* https://github.com/mstrnes2
 
 
-Alondra Zurita
-* email
-* LinkedIn
-* GitHub
+Alondra Zurita:
+* alondrazurita2@gmail.com
+* https://github.com/alondrazz
 
 
-Shaun Swinehart
-* email
-* LinkedIn
-* GitHub
+Shaun Swinehart:
+* shaun.leroyhigh@hotmail.com
+* https://github.com/billyg04t
+
+Joe Foster:
+* joseph.s.foster@icloud.com
+* https://github.com/joseph-s-foster
 
 ## Link to Site
 https://mischief-managed-04c91ebdf0c9.herokuapp.com/

@@ -4,7 +4,7 @@ const path = require('path');
 const router = express.Router();
 const { User, Book, Trivia, UserTrivia } = require('../models');
 const withAuth = require('../utils/auth');
-
+const { Op } = require("sequelize");
 // Load book data from JSON file
 const booksDataPath = path.join(__dirname, '../seeds/book_data.json');
 const books = JSON.parse(fs.readFileSync(booksDataPath, 'utf-8'));
@@ -37,20 +37,24 @@ router.get('/session', withAuth, async (req, res) => {
 
 router.get('/display/:id', async (req, res) => {
   try {
-    const bookId = parseInt(req.params.id);
-    const bookData = books.find(book => book.id === bookId);
 
+    const bookData = await Book.findOne({where: {id: req.params.id}})
     if (!bookData) {
       res.status(404).json({ message: 'No book found with that id!' });
       return;
     }
+    const book = bookData.get({plain:true})
+    const triviaData = await Trivia.findAll({where: {book_id: req.params.id}})
 
+    const milestoneTrivia = triviaData.map(t=> t.get({plain: true}))
     console.log('Image URL:', bookData.image); // Log the image URL
 
     res.render('singleBook', {
       layout: 'main',
-      title: bookData.title, // Pass the book title
-      image: bookData.image, // Pass the image URL
+      title: book.title, // Pass the book title
+      image: book.image, // Pass the image UR
+      id: book.id,
+      milestoneTrivia
     });
   } catch (err) {
     res.status(500).json(err);
@@ -67,5 +71,26 @@ router.post('/session', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/user', withAuth, async (req,res)=> {
+  try {
+    const userTriviaData = await UserTrivia.findAll({where: {user_id: req.session.user_id}})
+    const userTrivia = userTriviaData.map(t=>t.get({plain:true}))
+    const triviaIds = userTrivia.map(t=>t.trivia_id)
+    const triviaData = await Trivia.findAll({
+      where: {
+        id: { [Op.in]: triviaIds },
+
+      }, 
+      include: [Book]
+    });
+    const trivia = triviaData.map(t=>t.get({plain:true}))
+    console.log(trivia);
+    res.render("profile", {trivia})
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).json(err.message)
+  }
+})
 
 module.exports = router;

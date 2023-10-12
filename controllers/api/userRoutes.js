@@ -14,10 +14,12 @@ router.post('/', async (req, res) => {
       password_hash, // Assuming this is already hashed
       email,
     });
-
+    console.log(userData);
+    const user = userData.get({plain: true})
+   
     // Save user data in the session
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.user_id;
       req.session.email = userData.email;
       req.session.logged_in = true;
 
@@ -34,6 +36,7 @@ router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
+ console.log(userData);
     if (!userData) {
       res
         .status(400)
@@ -51,7 +54,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.user_id;
       req.session.email = userData.email;
       req.session.logged_in = true;
       

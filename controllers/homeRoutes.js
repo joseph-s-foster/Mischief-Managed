@@ -37,22 +37,25 @@ router.get('/session', withAuth, async (req, res) => {
 
 router.get('/display/:id', async (req, res) => {
   try {
+    const bookId = parseInt(req.params.id, 10);  // Convert id to an integer
 
-    const bookData = await Book.findOne({where: {id: req.params.id}})
+    const bookData = await Book.findOne({ where: { id: bookId } });
     if (!bookData) {
       res.status(404).json({ message: 'No book found with that id!' });
       return;
     }
-    const book = bookData.get({plain:true})
-    const triviaData = await Trivia.findAll({where: {book_id: req.params.id}})
 
-    const milestoneTrivia = triviaData.map(t=> t.get({plain: true}))
-    console.log('Image URL:', bookData.image); // Log the image URL
+    const book = bookData.get({ plain: true });
+    const triviaData = await Trivia.findAll({ where: { book_id: bookId } });
+
+    const milestoneTrivia = triviaData.map(t => t.get({ plain: true }));
+
+    console.log('Image URL:', book.image);
 
     res.render('singleBook', {
       layout: 'main',
-      title: book.title, // Pass the book title
-      image: book.image, // Pass the image UR
+      title: book.title,
+      image: book.image,
       id: book.id,
       milestoneTrivia
     });
@@ -60,6 +63,7 @@ router.get('/display/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 router.post('/session', async (req, res) => {
   try {

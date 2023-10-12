@@ -1,7 +1,6 @@
 body {
   font-family: "Bigelow Rules", cursive;
   font-size: 2rem;
-  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=26747'), auto;
 }
 
 .title {
@@ -133,6 +132,21 @@ input[type="password"]::placeholder {
   color: black;
 }
 
+.fa-google {
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 .books {
   margin-top: 30px;
   display: flex;
@@ -256,6 +270,39 @@ input[type="password"]::placeholder {
   margin-left: 3%;
 }
 
+.clr {
+  color: white;
+}
+
+.image {
+  height: 150px;
+  width: 110px;
+
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fs {
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.nav a {
+  color: white;
+min-width: 10%;
+}
+
+
+
 .google-btn {
   margin: 25px;
   width: 80%;
@@ -272,7 +319,6 @@ input[type="password"]::placeholder {
   transition: all 400ms ease 0s;
   display: flex;
 }
-
 .google-btn .google-icon-wrapper {
   position: absolute;
   margin-top: 1px;
@@ -300,6 +346,7 @@ input[type="password"]::placeholder {
   font-family: Roboto;
   user-select: none
 }
+
 
 @media screen and (max-width: 768px) {
   .books {

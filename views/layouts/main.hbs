@@ -1,41 +1,43 @@
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/reset.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap"
-			rel="stylesheet"
-		/>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/style.css" />
-		<title>Mischief Managed</title>
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css" />
+	<title>Mischief Managed</title>
+</head>
 
-	<body class = "cursor">
-		<div>
-			<img class="fixed-image" src="/background-login-desktop.png" alt="" />
-		</div>
-		<div>
-			<header>
-				<h1 class="title">
-					Mischief
-					<br />
-					Managed
-				</h1>
-			</header>
-			<main>
-				<!-- Render the sub layout -->
-				{{{body}}}
-			</main>
-			<footer>
+<body>
+	<div>
+		<img class="fixed-image" src="/background-login-desktop.png" alt="" />
+	</div>
+	<div>
+		<header>
+			<div class="nav">
+			<a href="/user">My Milestones</a>
+			<a href="/session">Books</a></div>
+			<h1 class="title">
+				Mischief
+				<br />
+				Managed
+			</h1>
 
-			</footer>
-		</div>
-	</body>
+		</header>
+		<main>
+			<!-- Render the sub layout -->
+			{{{body}}}
+		</main>
+		<footer>
+
+		</footer>
+	</div>
+</body>
 
 </html>

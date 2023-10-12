@@ -7,26 +7,26 @@ const withAuth = require('../../utils/auth')
 router.use("/session", sessionRoutes);
 
 // Get a single book by ID
-router.get("/display/:id", async (req, res) => {
-  try {
-    const bookData = await Book.findByPk(req.params.id);
+// router.get("/display/:id", async (req, res) => {
+//   try {
+//     const bookData = await Book.findByPk(req.params.id);
 
-    if (!bookData) {
-      res.status(404).json({ message: "No book found with that id!" });
-      return;
-    }
+//     if (!bookData) {
+//       res.status(404).json({ message: "No book found with that id!" });
+//       return;
+//     }
 
-    console.log("Image URL:", bookData.image); // Log the image URL
+//     console.log("Image URL:", bookData.image); // Log the image URL
 
-    res.render("singleBook", {
-      layout: "main",
-      title: bookData.title, // Pass the book title
-      image: bookData.image, // Pass the image URL
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render("singleBook", {
+//       layout: "main",
+//       title: bookData.title, // Pass the book title
+//       image: bookData.image, // Pass the image URL
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get("/trivia/:bookid/:milestone", withAuth, async (req, res) => {
   try {

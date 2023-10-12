@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth')
 router.use("/session", sessionRoutes);
 
 // Get a single book by ID
-router.get("/singlebook/:id", async (req, res) => {
+router.get("/display/:id", async (req, res) => {
   try {
     const bookData = await Book.findByPk(req.params.id);
 

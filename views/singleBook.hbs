@@ -5,6 +5,9 @@
 
   <div>
     <button class="dropbtn custom-cursor">Reading Progress</button>
+
+    {{!-- <button class="dropbtn">Reading Progress</button> --}}
+
     <ul>
       {{!-- {{#each books}}
       {{#ifEquals this.book_id currentBookId}}
@@ -16,8 +19,10 @@
       {{/ifEquals}}
       {{/each}} --}}
       <input id='book-id' type="hidden" value="{{id}}" />
-      <span class="clr">Select Milestone: </span>
-      <select id="milestone" class="custom-cursor">
+
+      <span class="clr">% Completed</span>
+      <select id="milestone">
+
         <option value="">Select</option>
         {{#each milestoneTrivia}}
 
@@ -56,10 +61,4 @@
 
   </div> --}}
 
-  <div class="form-group" id="logout">
-    <button class="logout">Log Out</button>
-  </div>
-</div>
-
-<script src='/js/logout.js'></script>
 <script src='/js/singleBook.js'></script>

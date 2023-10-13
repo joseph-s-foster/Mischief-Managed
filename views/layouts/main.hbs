@@ -41,21 +41,21 @@
         style="position:absolute; top: 0px; right: 0px;"
       />
     </a>
+    
     <div>
       <img class="fixed-image" src="/background-login-desktop.png" alt="" />
     </div>
     <div>
-      <header>
-        <div class="nav">
-          <a href="/user">My Milestones</a>
-          <a href="/session">Books</a></div>
+       <header>
         <h1 class="title">
           Mischief
           <br />
           Managed
         </h1>
-
-      </header>
+        <div class="form-group" id="logout">
+          <button class="logout" id="logoutButton">Log Out</button>
+        </div>
+      </head>
       <main>
         <!-- Render the sub layout -->
         {{{body}}}
@@ -64,6 +64,12 @@
 
       </footer>
     </div>
+
+    {{! <div class="milestone">
+          <button href="/user">Milestones</button>
+	   </div> }}
+
+    <script src="/js/logout.js"></script>
   </body>
 
 </html>

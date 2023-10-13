@@ -41,6 +41,7 @@ const googleSignInHandler = async (event) => {
 const updateLogoutButtonVisibility = () => {
   const logoutButton = document.getElementById('logoutButton');
   const loggedIn = true;
+
   if (loggedIn) {
     logoutButton.style.display = 'block';
   } else {

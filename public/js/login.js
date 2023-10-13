@@ -47,7 +47,24 @@ const googleSignInHandler = async (event) => {
 
   
 }
+const updateLogoutButtonVisibility = () => {
+  const logoutButton = document.getElementById('logoutButton');
+  const loggedIn = /* Check if the user is logged in */ true; // Update this based on your actual logic
 
-document.querySelector("#login").addEventListener("click", loginFormHandler);
+  if (loggedIn) {
+    logoutButton.style.display = 'block';
+  } else {
+    logoutButton.style.display = 'none';
+  }
+};
 
-document.querySelector("#signup").addEventListener("click", signupFormHandler);
+document.querySelector("#login").addEventListener("click", async (event) => {
+  await loginFormHandler(event);
+  updateLogoutButtonVisibility();
+});
+
+document.querySelector("#signup").addEventListener("click", async (event) => {
+  await signupFormHandler(event);
+  updateLogoutButtonVisibility();
+});
+

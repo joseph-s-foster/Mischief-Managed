@@ -4,7 +4,7 @@
   </div>
 
   <div>
-    <button class="dropbtn">Reading Progress</button>
+    {{!-- <button class="dropbtn">Reading Progress</button> --}}
     <ul>
       {{!-- {{#each books}}
       {{#ifEquals this.book_id currentBookId}}
@@ -16,7 +16,7 @@
       {{/ifEquals}}
       {{/each}} --}}
       <input id='book-id' type="hidden" value="{{id}}" />
-      <span class="clr">Select Milestone: </span>
+      <span class="clr">Progress %: </span>
       <select id="milestone">
         <option value="">Select</option>
         {{#each milestoneTrivia}}

@@ -18,7 +18,9 @@ const updateLogoutButtonVisibility = () => {
   const loggedIn = true; // Change this based on your actual login logic
 
   if (loggedIn) {
-    logoutButton.style.display = 'block';
+    logoutButton.style.display = 'flex';
+    logoutButton.style.alignItems = 'center';
+    logoutButton.style.justifyContent = 'center';
   } else {
     logoutButton.style.display = 'none';
   }

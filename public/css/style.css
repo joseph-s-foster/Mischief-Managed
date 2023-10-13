@@ -106,45 +106,23 @@ input[type="password"]::placeholder {
 #login {
   margin-left: 5%;
   width: 44%;
-  box-shadow: 0 0 20px rgb(127, 153, 127),  
-              0 0 40px rgb(127, 153, 127);
+  box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127);
   transition: 2s;
 }
 
 #signup {
   margin-right: 5%;
   width: 44%;
-  box-shadow: 0 0 20px rgb(127, 153, 127),  
-              0 0 40px rgb(127, 153, 127);
+  box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127);
   transition: 2s;
 }
 
-#login:hover, #signup:hover {
+#login:hover,
+#signup:hover {
   box-shadow: 0 0 20px 10px rgb(217, 233, 217);
 }
 
-
-#google-btn {
-  margin-left: 5%;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 20px;
-  width: 90%;
-  height: 54px; /* Adjust height to match the input field */
-  padding: 10px;
-  padding-left: 0; /* Adjust padding for vertical centering */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#google-login {
-  text-decoration: none;
-  color: black;
-}
-
-.hide{
+.hide {
   display: none;
 }
 
@@ -213,17 +191,6 @@ input[type="password"]::placeholder {
   transform: scale(1.1); /* Enlarge the image when hovered */
 }
 
-.dropdown {
-  display: flex;
-  background-color: #ffbf00;
-  margin-top: 3px;
-  border-radius: 5px;
-  justify-content: center;
-}
-
-.dropdown-content {
-  display: none;
-}
 #logoutBtn {
   margin-top: 30px;
 }
@@ -285,10 +252,9 @@ input[type="password"]::placeholder {
 }
 
 .google-btn {
-  margin: 25px;
+  margin-top: 20px;
+  margin-left: 31px;
   width: 80%;
-  min-width: 184px;
-  max-width: 184px;
   height: 42px;
   background-color: #fcfcfc;
   border-radius: 2px;
@@ -303,10 +269,10 @@ input[type="password"]::placeholder {
 .google-btn .google-icon-wrapper {
   position: absolute;
   margin-top: 1px;
-  margin-left: -18px;
+  margin-left: -10px;
   width: 40px;
   height: 40px;
-  border-radius: 2px;
+  border-radius: 7px;
   user-select: none;
 }
 .google-btn .google-icon-svg {

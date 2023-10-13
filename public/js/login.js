@@ -48,6 +48,7 @@ const googleSignInHandler = async (event) => {
   
 }
 
+
 document.querySelector("#login").addEventListener("click", loginFormHandler);
 
 document.querySelector("#signup").addEventListener("click", signupFormHandler);

@@ -143,6 +143,10 @@ input[type="password"]::placeholder {
   color: black;
 }
 
+.hide{
+  display: none;
+}
+
 .fa-google {
   background: conic-gradient(
       from -45deg,

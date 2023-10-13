@@ -49,7 +49,7 @@ const googleSignInHandler = async (event) => {
 }
 const updateLogoutButtonVisibility = () => {
   const logoutButton = document.getElementById('logoutButton');
-  const loggedIn = /* Check if the user is logged in */ true; // Update this based on your actual logic
+  const loggedIn = true;
 
   if (loggedIn) {
     logoutButton.style.display = 'block';

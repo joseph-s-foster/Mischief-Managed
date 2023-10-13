@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const router = express.Router();
-const { User, Book, Trivia, UserTrivia } = require('../models');
+const { Book, Trivia, UserTrivia } = require('../models');
 const withAuth = require('../utils/auth');
 const { Op } = require("sequelize");
 // Load book data from JSON file

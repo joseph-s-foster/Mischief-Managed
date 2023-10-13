@@ -106,12 +106,23 @@ input[type="password"]::placeholder {
 #login {
   margin-left: 5%;
   width: 44%;
+  box-shadow: 0 0 20px rgb(127, 153, 127),  
+              0 0 40px rgb(127, 153, 127);
+  transition: 2s;
 }
 
 #signup {
   margin-right: 5%;
   width: 44%;
+  box-shadow: 0 0 20px rgb(127, 153, 127),  
+              0 0 40px rgb(127, 153, 127);
+  transition: 2s;
 }
+
+#login:hover, #signup:hover {
+  box-shadow: 0 0 20px 10px rgb(217, 233, 217);
+}
+
 
 #google-btn {
   margin-left: 5%;
@@ -131,6 +142,10 @@ input[type="password"]::placeholder {
 #google-login {
   text-decoration: none;
   color: black;
+}
+
+.hide{
+  display: none;
 }
 
 .fa-google {

@@ -3,15 +3,12 @@ const loginFormHandler = async (event) => {
   console.log("test");
   const email = document.querySelector("#email-login").value.trim();
   const password_hash = document.querySelector("#password-login").value.trim();
-  
-
   if (email && password_hash) {
     const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password_hash }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
       document.location.replace("/session");
     } else {
@@ -19,10 +16,8 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
-
   const email = document.querySelector("#email-login").value.trim();
   const password_hash = document.querySelector("#password-login").value.trim();
   console.log(email, password_hash);
@@ -32,7 +27,6 @@ const signupFormHandler = async (event) => {
       body: JSON.stringify({ email: email, password_hash: password_hash }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
       document.location.replace("/session");
     } else {
@@ -41,11 +35,8 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
 const googleSignInHandler = async (event) => {
   event.preventDefault();
-
-  
 }
 const updateLogoutButtonVisibility = () => {
   const logoutButton = document.getElementById('logoutButton');
@@ -57,14 +48,11 @@ const updateLogoutButtonVisibility = () => {
     logoutButton.style.display = 'none';
   }
 };
-
 document.querySelector("#login").addEventListener("click", async (event) => {
   await loginFormHandler(event);
   updateLogoutButtonVisibility();
 });
-
 document.querySelector("#signup").addEventListener("click", async (event) => {
   await signupFormHandler(event);
   updateLogoutButtonVisibility();
 });
-

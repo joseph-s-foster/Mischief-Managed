@@ -293,6 +293,34 @@ input[type="password"]::placeholder {
   font-family: Roboto;
   user-select: none;
 }
+#milestone {
+  font-family: 'Risque', sans-serif;
+  display: flex;
+  color: white;
+  background-color: rgb(9, 61, 49);
+  border: 2px solid #ffbf00;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px limegreen;
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  justify-content: space-between;
+
+}
+.clr{
+  font-family: 'Risque', sans-serif;
+  color: white;
+  background-color: rgb(11, 63, 54, 0.7);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgb(59, 172, 243);
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  width: 50%; /* Adjust the width as needed */
+  height: auto;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 768px) {
   .books {

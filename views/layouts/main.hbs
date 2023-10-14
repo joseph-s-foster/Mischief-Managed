@@ -4,30 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap"
-      rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto"
     />
-    
-      {{!-- href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Risque&display=swap" 
-      rel="stylesheet" 
-      /> --}}
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Risque&display=swap"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <style type="text/css">
+    <style>
       body, .custom-cursor:hover, a:hover { cursor:
-      url(http://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;
-      }
+      url(http://cur.cursors-4u.net/user/use-1/use160.cur), auto !important; }
     </style>
     <title>Mischief Managed</title>
   </head>
@@ -45,33 +41,24 @@
         style="position:absolute; top: 0px; right: 0px;"
       />
     </a>
-    
+
     <div>
       <img class="fixed-image" src="/background-login-desktop.png" alt="" />
     </div>
     <div>
-       <header>
-        <h1 class="title">
-          Mischief
-          <br />
-          Managed
-        </h1>
-        <div class="form-group" id="logout">
-          <button class="logout" id="logoutButton">Log Out</button>
-        </div>
-      </head>
+      <div class="form-group" id="logout">
+        <button class="logout" id="logoutButton">Log Out</button>
+      </div>
       <main>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
-      <footer>
-
-      </footer>
+      <footer></footer>
     </div>
 
     {{! <div class="milestone">
-          <button href="/user">Milestones</button>
-	   </div> }}
+      <button href="/user">Milestones</button>
+    </div> }}
 
     <script src="/js/logout.js"></script>
   </body>

@@ -4,28 +4,22 @@ const logout = async () => {
     headers: { "Content-Type": "application/json" },
   });
 
-  if (response.ok) {
-    console.log(response);
-    document.location.replace("/");
-    updateLogoutButtonVisibility();
-  } else {
+  if (!response.ok) {
     alert("Failed to log out.");
+  } else {
+    document.location.replace("/");
   }
 };
 
-const updateLogoutButtonVisibility = () => {
+const updateLogoutButtonVisibility = (loggedIn) => {
   const logoutButton = document.getElementById("logoutButton");
-  const loggedIn = true;
 
+  logoutButton.style.display = loggedIn ? "flex" : "none";
   if (loggedIn) {
-    logoutButton.style.display = "flex";
     logoutButton.style.alignItems = "center";
     logoutButton.style.justifyContent = "center";
-  } else {
-    logoutButton.style.display = "none";
   }
 };
 
 document.querySelector("#logoutButton").addEventListener("click", logout);
-
-updateLogoutButtonVisibility();
+updateLogoutButtonVisibility(true);

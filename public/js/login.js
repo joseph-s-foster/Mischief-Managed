@@ -48,24 +48,24 @@ const updateLogoutButtonVisibility = () => {
   }
 };
 
-const updateHeaderVisibility = () => {
-  const header = document.querySelector('header');
+// const updateHeaderVisibility = () => {
+//   const header = document.querySelector('header');
 
-  if (loggedIn) {
-    header.style.display = 'none';
-  } else {
-    header.style.display = 'block';
-  }
-};
+//   if (loggedIn) {
+//     header.style.display = 'none';
+//   } else {
+//     header.style.display = 'block';
+//   }
+// };
 
 document.querySelector("#login").addEventListener("click", async (event) => {
   await loginFormHandler(event);
   updateLogoutButtonVisibility();
-  updateHeaderVisibility();
+  // updateHeaderVisibility();
 });
 
 document.querySelector("#signup").addEventListener("click", async (event) => {
   await signupFormHandler(event);
   updateLogoutButtonVisibility();
-  updateHeaderVisibility();
+  // updateHeaderVisibility();
 });

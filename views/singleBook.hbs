@@ -4,58 +4,17 @@
   </div>
 
   <div>
-
-    {{!-- <button class="dropbtn">Reading Progress</button> --}}
-
     <ul>
-      {{!-- {{#each books}}
-      {{#ifEquals this.book_id currentBookId}}
-      <li class="dropdown">{{this.trivia}}%
-        <div class="dropdown-content">
-          <div>{{this.content}}</div>
-        </div>
-      </li>
-      {{/ifEquals}}
-      {{/each}} --}}
-      <input id='book-id' type="hidden" value="{{id}}" />
+      <input id="book-id" type="hidden" value="{{id}}" />
       <select id="milestone">
-
         <option value="">Read %</option>
         {{#each milestoneTrivia}}
-
-        <option class="opt" value="{{trivia}}">{{trivia}} </option>
-
+          <option class="opt" value="{{trivia}}">{{trivia}}</option>
         {{/each}}
       </select>
     </ul>
   </div>
   <div class="trivia"></div>
+</div>
 
-  {{!-- <div>
-    <button class="dropbtn">Reading Progress</button>
-    <ul>
-      <li class="dropdown">0%
-        <div class="dropdown-content">
-          <div>Trivia Fact</div>
-      </li>
-      <li class="dropdown">25%
-        <div class="dropdown-content">
-          <div>Trivia Fact</div>
-      </li>
-      <li class="dropdown">50%
-        <div class="dropdown-content">
-          <div>Trivia Fact</div>
-      </li>
-      <li class="dropdown">75%
-        <div class="dropdown-content">
-          <div>Trivia Fact</div>
-      </li>
-      <li class="dropdown">100%
-        <div class="dropdown-content">
-          <div>Trivia Fact</div>
-      </li>
-    </ul>
-
-  </div> --}}
-
-<script src='/js/singleBook.js'></script>
+<script src="/js/singleBook.js"></script>

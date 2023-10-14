@@ -54,7 +54,7 @@ const updateHeaderVisibility = () => {
   if (loggedIn) {
     header.style.display = 'none';
   } else {
-    header.style.display = 'flex';
+    header.style.display = 'block';
   }
 };
 

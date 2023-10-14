@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto"
       rel="stylesheet"
     />
-    
-      {{!-- href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Risque&display=swap" 
+
+    {{! href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Risque&display=swap" 
       rel="stylesheet" 
-      /> --}}
+      /> }}
 
     <link
       rel="stylesheet"
@@ -26,8 +26,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <style type="text/css">
       body, .custom-cursor:hover, a:hover { cursor:
-      url(http://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;
-      }
+      url(http://cur.cursors-4u.net/user/use-1/use160.cur), auto !important; }
     </style>
     <title>Mischief Managed</title>
   </head>
@@ -45,21 +44,23 @@
         style="position:absolute; top: 0px; right: 0px;"
       />
     </a>
-    
+
     <div>
       <img class="fixed-image" src="/background-login-desktop.png" alt="" />
     </div>
     <div>
-       <header>
-        <h1 class="title">
-          Mischief
-          <br />
-          Managed
-        </h1>
-        <div class="form-group" id="logout">
-          <button class="logout" id="logoutButton">Log Out</button>
-        </div>
-      </head>
+      {{#unless loggedIn}}
+        <header>
+          <h1 class="title">
+            Mischief
+            <br />
+            Managed
+          </h1>
+        </header>
+      {{/unless}}
+      <div class="form-group" id="logout">
+        <button class="logout" id="logoutButton">Log Out</button>
+      </div>
       <main>
         <!-- Render the sub layout -->
         {{{body}}}

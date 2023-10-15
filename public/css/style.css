@@ -209,12 +209,6 @@ input[type="password"]::placeholder {
   transition: transform 0.2s;
 }
 
-/* Apply the hover effect to the parent element */
-.books a:hover .tooltip {
-  display: block;
-  opacity: 1;
-}
-
 .book-cover:hover {
   transform: scale(1.1); /* Enlarge the image when hovered */
 }

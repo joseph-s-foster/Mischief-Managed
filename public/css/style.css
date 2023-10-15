@@ -2,16 +2,19 @@ body {
   font-family: "Bigelow Rules", cursive;
   font-size: 2rem;
   margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh; /* Set the height to 100% of the viewport height */
-  width: 100vw; /* Set the width to 100% of the viewport width */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
   background-color: #000;
 }
 
+main {
+  flex-grow: 1; /* Allow the main content to grow and push the footer down */
+}
+
 .title {
+  font-weight: normal;
   padding-top: 5%;
   padding-bottom: 2%;
   font-size: 8rem;
@@ -22,6 +25,7 @@ body {
 }
 
 .title-secondary {
+  font-weight: normal;
   padding-top: 8%;
   padding-bottom: 2%;
   font-size: 5rem;
@@ -46,33 +50,16 @@ body {
 }
 
 .footer {
-  font-size: 2rem;
+  font-weight: normal;
+  position: absolute;
+  bottom: 2%;
+  font-size: 1.75rem;
   color: #ffbf00;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-  padding-bottom: 1%;
-  width: 100%;
   text-align: center;
-  position: fixed; /* Fix the footer to the bottom */
-  bottom: 0; /* Stick the footer to the bottom of the viewport */
-}
-
-/* .fixed-image {
-  z-index: -1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  padding: 8px;
   width: 100%;
-  height: 100%;
-  flex-shrink: 1;
-} */
-
+  background-color: #000; /* Adjust background color as needed */
+}
 
 .container {
   display: flex;
@@ -160,20 +147,20 @@ input[type="password"]::placeholder {
 #login {
   margin-left: 5%;
   width: 44%;
-  box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127);
-  transition: 2s;
+  /* box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127); */
+  transition: 1s;
 }
 
 #signup {
   margin-right: 5%;
   width: 44%;
-  box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127);
-  transition: 2s;
+  /* box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127); */
+  transition: 1s;
 }
 
 #login:hover,
 #signup:hover {
-  box-shadow: 0 0 20px 10px rgb(217, 233, 217);
+  box-shadow: 0px 0 16px 4px #fff5db;
 }
 
 .hide {
@@ -242,8 +229,8 @@ input[type="password"]::placeholder {
 
 #logout {
   position: absolute;
-  top: 15px; /* Adjust this value to position the button from the top */
-  right: 15px; /* Adjust this value to position the button from the right */
+  top: 4%; /* Adjust this value to position the button from the top */
+  right: 2%; /* Adjust this value to position the button from the right */
 }
 
 .logout {
@@ -300,8 +287,6 @@ input[type="password"]::placeholder {
   background-color: #fcfcfc;
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 rgba(66, 52, 52, 0.2);
-  cursor: pointer;
-  cursor: hand;
   align-self: center;
   user-select: none;
   transition: all 400ms ease 0s;
@@ -370,6 +355,26 @@ input[type="password"]::placeholder {
   }
   .book-cover {
     margin-top: 15px;
-    margin-left: 30%;
+    margin-left: 26%;
+  }
+  .title-secondary {
+    justify-content: left;
+    padding: 2%;
+    font-size: 3rem;
+  }
+  
+  .logout {
+    height: 32px;
+    font-size: 2rem;
+  }
+  
+  #logout {
+    position: absolute;
+    top: 2%; /* Adjust this value to position the button from the top */
+    right: 6%; /* Adjust this value to position the button from the right */
+  }
+  .footer {
+    position: relative;
+    font-size: 1.25rem;
   }
 }

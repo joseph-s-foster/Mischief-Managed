@@ -28,7 +28,7 @@ main {
   font-weight: normal;
   padding-top: 8%;
   padding-bottom: 2%;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #ffbf00;
   display: flex;
   justify-content: center;
@@ -53,7 +53,7 @@ main {
   font-weight: normal;
   position: absolute;
   bottom: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #ffbf00;
   text-align: center;
   padding: 8px;
@@ -228,7 +228,7 @@ input[type="password"]::placeholder {
 
 .logout {
   height: 54px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -353,23 +353,22 @@ input[type="password"]::placeholder {
   .title-secondary {
     justify-content: left;
     padding: 2%;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
   .logout {
     height: 32px;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   #logout {
     position: absolute;
-    top: 2%; /* Adjust this value to position the button from the top */
-    right: 6%; /* Adjust this value to position the button from the right */
+    top: 12px; /* Adjust this value to position the button from the top */
+    right: 12px; /* Adjust this value to position the button from the right */
   }
   .footer {
-    position: relative;
-    font-size: 1.25rem;
-  }
+display: none;
+}
 }
 
 @media screen and (max-height: 600px) {

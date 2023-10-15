@@ -202,7 +202,7 @@ input[type="password"]::placeholder {
 }
 
 .book-cover {
-  width: 75%;
+  width: 85%;
   border-radius: 10px;
   /* box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2); */
   transition: transform 0.2s;
@@ -222,8 +222,8 @@ input[type="password"]::placeholder {
 
 #logout {
   position: absolute;
-  top: 4%; /* Adjust this value to position the button from the top */
-  right: 2%; /* Adjust this value to position the button from the right */
+  top: 28px; /* Adjust this value to position the button from the top */
+  right: 28px; /* Adjust this value to position the button from the right */
 }
 
 .logout {

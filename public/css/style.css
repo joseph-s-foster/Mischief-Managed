@@ -160,8 +160,7 @@ input[type="password"]::placeholder {
 
 #login:hover,
 #signup:hover {
-  border: 1px solid #313131;
-  box-shadow: 0 0 15px 10px rgb(217, 233, 217);
+  box-shadow: 0px 0 16px 4px #fff5db;
 }
 
 .hide {
@@ -288,8 +287,6 @@ input[type="password"]::placeholder {
   background-color: #fcfcfc;
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 rgba(66, 52, 52, 0.2);
-  cursor: pointer;
-  cursor: hand;
   align-self: center;
   user-select: none;
   transition: all 400ms ease 0s;

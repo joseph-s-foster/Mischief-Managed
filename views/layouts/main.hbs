@@ -1,43 +1,69 @@
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="/css/reset.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/css/style.css" />
-	<title>Mischief Managed</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Risque&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      body, .custom-cursor:hover, a:hover, button:hover, option:hover, select:hover { cursor:
+      url(http://cur.cursors-4u.net/user/use-1/use160.cur), auto !important; }
+    </style>
+    <title>Mischief Managed</title>
+  </head>
 
-<body>
-	<div>
-		<img class="fixed-image" src="/background-login-desktop.png" alt="" />
-	</div>
-	<div>
-		<header>
-			<div class="nav">
-			<a href="/user">My Milestones</a>
-			<a href="/session">Books</a></div>
-			<h1 class="title">
-				Mischief
-				<br />
-				Managed
-			</h1>
+  <body>
+    <a
+      href="http://www.cursors-4u.com/cursor/2011/02/06/harry-potter-magical-wand.html"
+      target="_blank"
+      title="Harry Potter Magical Wand"
+    >
+      <img
+        src="http://cur.cursors-4u.net/cursor.png"
+        border="0"
+        alt="Harry Potter Magical Wand"
+        style="position:absolute; top: 0px; right: 0px;"
+      />
+    </a>
 
-		</header>
-		<main>
-			<!-- Render the sub layout -->
-			{{{body}}}
-		</main>
-		<footer>
+    {{! <div>
+      <img class="fixed-image" src="/background-login-desktop.png" alt="" />
+    </div> }}
+    <div>
+      <div class="form-group" id="logout">
+        <button class="logout" id="logoutButton">Log Out</button>
+      </div>
+      <main>
+        <!-- Render the sub layout -->
+        {{{body}}}
+      </main>
+    </div>
 
-		</footer>
-	</div>
-</body>
+    <footer>
+      <h1 class="footer">I solemnly swear that I am up to no good</h1>
+    </footer>
+
+    {{! <div class="milestone">
+      <button href="/user">Milestones</button>
+    </div> }}
+
+    <script src="/js/logout.js"></script>
+  </body>
 
 </html>

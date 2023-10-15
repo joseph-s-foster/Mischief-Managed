@@ -1,11 +1,22 @@
 body {
   font-family: "Bigelow Rules", cursive;
   font-size: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+main {
+  flex-grow: 1; /* Allow the main content to grow and push the footer down */
 }
 
 .title {
+  font-weight: normal;
   padding-top: 2%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   font-size: 8rem;
   color: #ffbf00;
   display: flex;
@@ -13,11 +24,41 @@ body {
   z-index: 1000;
 }
 
-.fixed-image {
-  position: fixed;
-  z-index: -1000;
-  height: 100%;
+.title-secondary {
+  font-weight: normal;
+  padding-top: 8%;
+  padding-bottom: 2%;
+  font-size: 5rem;
+  color: #ffbf00;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.spacing {
+  padding: 16px; /* Adjust the top and bottom padding as needed */
+  width: 96%;
+  margin: 0 auto;
+}
+
+.border-top {
+  border-top: 2px solid #ffbf00;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #ffbf00;
+}
+
+.footer {
+  font-weight: normal;
+  position: absolute;
+  bottom: 2%;
+  font-size: 1.75rem;
+  color: #ffbf00;
+  text-align: center;
+  padding: 8px;
   width: 100%;
+  background-color: #000; /* Adjust background color as needed */
 }
 
 .container {
@@ -80,7 +121,8 @@ input[type="password"]::placeholder {
   padding-top: 7px;
 }
 
-.form-group button, .dropbtn {
+.form-group button,
+.dropbtn {
   background-color: #ffbf00;
   font-weight: bold;
   color: #000;
@@ -105,31 +147,24 @@ input[type="password"]::placeholder {
 #login {
   margin-left: 5%;
   width: 44%;
+  /* box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127); */
+  transition: 1s;
 }
 
 #signup {
   margin-right: 5%;
   width: 44%;
+  /* box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127); */
+  transition: 1s;
 }
 
-#google-btn {
-  margin-left: 5%;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 20px;
-  width: 90%;
-  height: 54px; /* Adjust height to match the input field */
-  padding: 10px;
-  padding-left: 0; /* Adjust padding for vertical centering */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#login:hover,
+#signup:hover {
+  box-shadow: 0px 0 16px 4px #fff5db;
 }
 
-#google-login {
-  text-decoration: none;
-  color: black;
+.hide {
+  display: none;
 }
 
 .fa-google {
@@ -148,7 +183,7 @@ input[type="password"]::placeholder {
 }
 
 .books {
-  margin-top: 30px;
+  margin-left: 3%;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -170,75 +205,26 @@ input[type="password"]::placeholder {
 .book-cover {
   width: 75%;
   border-radius: 10px;
-  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);  
+  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
   transition: transform 0.2s;
 }
-.tooltip {
-  font-size: 14px;
-  font-family: sans-serif;
-  position: absolute;
-  display: none;
-  background: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 100; /* Make sure it has a higher z-index */
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-/* Apply the hover effect to the parent element */
-.books a:hover .tooltip {
-  display: block;
-  opacity: 1;
-}
-
-
 
 .book-cover:hover {
   transform: scale(1.1); /* Enlarge the image when hovered */
 }
 
-.tooltip {
-  font-family: sans-serif;
-  font-size: 14px;
-  position: absolute;
-  display: none;
-  background: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 100; /* Make sure it has a higher z-index */
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-/* Apply the hover effect to the parent element */
-.books a:hover .tooltip {
-  display: block;
-  opacity: 1;
-}
-
-
-.dropdown {
-  display: flex;
-  background-color: #ffbf00;
-  margin-top: 3px;
-  border-radius: 5px;
-  justify-content: center;
-}
-
-.dropdown-content {
-  display: none;
-}
 #logoutBtn {
   margin-top: 30px;
 }
 
+#logoutButton {
+  display: none; /* Initially hide the logout button */
+}
+
 #logout {
   position: absolute;
-  top: 15px; /* Adjust this value to position the button from the top */
-  right: 15px; /* Adjust this value to position the button from the right */
+  top: 4%; /* Adjust this value to position the button from the top */
+  right: 2%; /* Adjust this value to position the button from the right */
 }
 
 .logout {
@@ -249,21 +235,9 @@ input[type="password"]::placeholder {
   cursor: pointer;
   border-radius: 7px;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-}
-
-#back {
-  position: absolute;
-  top: 15px; /* Adjust this value to position the button from the top */
-  left: 15px; /* Adjust this value to position the button from the left */
-}
-
-.back {
-  border: none;
-  cursor: pointer;
-  border-radius: 7px;
 }
 
 .books:first-child {
@@ -277,7 +251,6 @@ input[type="password"]::placeholder {
 .image {
   height: 150px;
   width: 110px;
-
 }
 .flex {
   display: flex;
@@ -293,27 +266,21 @@ input[type="password"]::placeholder {
 .nav {
   display: flex;
   justify-content: flex-end;
- 
 }
 
 .nav a {
   color: white;
-min-width: 10%;
+  min-width: 10%;
 }
 
-
-
 .google-btn {
-  margin: 25px;
+  margin-top: 20px;
+  margin-left: 31px;
   width: 80%;
-  min-width: 184px;
-  max-width: 184px;
   height: 42px;
   background-color: #fcfcfc;
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 rgba(66, 52, 52, 0.2);
-  cursor: pointer;
-  cursor: hand;
   align-self: center;
   user-select: none;
   transition: all 400ms ease 0s;
@@ -322,11 +289,11 @@ min-width: 10%;
 .google-btn .google-icon-wrapper {
   position: absolute;
   margin-top: 1px;
-  margin-left: -18px;
+  margin-left: -10px;
   width: 40px;
   height: 40px;
-  border-radius: 2px;
-  user-select: none
+  border-radius: 7px;
+  user-select: none;
 }
 .google-btn .google-icon-svg {
   position: absolute;
@@ -335,18 +302,44 @@ min-width: 10%;
   margin-right: 20px;
   width: 18px;
   height: 18px;
-  user-select: none
+  user-select: none;
 }
 .google-btn .btn-text {
   float: right;
   margin: 15px 24px 49px 57px;
   color: #757575;
   font-size: 14px;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   font-family: Roboto;
-  user-select: none
+  user-select: none;
 }
-
+#milestone {
+  font-family: "Risque", sans-serif;
+  display: flex;
+  color: white;
+  background-color: rgb(9, 61, 49);
+  border: 2px solid #ffbf00;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px limegreen;
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  justify-content: space-between;
+}
+.clr {
+  font-family: "Risque", sans-serif;
+  color: white;
+  background-color: rgb(11, 63, 54, 0.7);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgb(59, 172, 243);
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  width: 50%; /* Adjust the width as needed */
+  height: auto;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 768px) {
   .books {
@@ -356,6 +349,26 @@ min-width: 10%;
   }
   .book-cover {
     margin-top: 15px;
-    margin-left: 30%;
+    margin-left: 26%;
+  }
+  .title-secondary {
+    justify-content: left;
+    padding: 2%;
+    font-size: 3rem;
+  }
+  
+  .logout {
+    height: 32px;
+    font-size: 2rem;
+  }
+  
+  #logout {
+    position: absolute;
+    top: 2%; /* Adjust this value to position the button from the top */
+    right: 6%; /* Adjust this value to position the button from the right */
+  }
+  .footer {
+    position: relative;
+    font-size: 1.25rem;
   }
 }

@@ -21,8 +21,8 @@ const loginFormHandler = async (event) => {
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password_hash = document.querySelector("#password-signup").value.trim();
+  const email = document.querySelector("#email-login").value.trim();
+  const password_hash = document.querySelector("#password-login").value.trim();
   if (email && password_hash) {
     const response = await fetch("/api/users", {
       method: "POST",
@@ -48,24 +48,12 @@ const updateLogoutButtonVisibility = () => {
   }
 };
 
-// const updateHeaderVisibility = () => {
-//   const header = document.querySelector('header');
-
-//   if (loggedIn) {
-//     header.style.display = 'none';
-//   } else {
-//     header.style.display = 'block';
-//   }
-// };
-
 document.querySelector("#login").addEventListener("click", async (event) => {
   await loginFormHandler(event);
   updateLogoutButtonVisibility();
-  // updateHeaderVisibility();
 });
 
 document.querySelector("#signup").addEventListener("click", async (event) => {
   await signupFormHandler(event);
   updateLogoutButtonVisibility();
-  // updateHeaderVisibility();
 });

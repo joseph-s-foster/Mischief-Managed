@@ -14,6 +14,7 @@ main {
 }
 
 .title {
+  font-weight: normal;
   padding-top: 5%;
   padding-bottom: 2%;
   font-size: 8rem;
@@ -24,6 +25,7 @@ main {
 }
 
 .title-secondary {
+  font-weight: normal;
   padding-top: 8%;
   padding-bottom: 2%;
   font-size: 5rem;
@@ -48,9 +50,10 @@ main {
 }
 
 .footer {
+  font-weight: normal;
   position: absolute;
   bottom: 2%;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #ffbf00;
   text-align: center;
   padding: 8px;
@@ -144,20 +147,21 @@ input[type="password"]::placeholder {
 #login {
   margin-left: 5%;
   width: 44%;
-  box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127);
-  transition: 2s;
+  /* box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127); */
+  transition: 1s;
 }
 
 #signup {
   margin-right: 5%;
   width: 44%;
-  box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127);
-  transition: 2s;
+  /* box-shadow: 0 0 20px rgb(127, 153, 127), 0 0 40px rgb(127, 153, 127); */
+  transition: 1s;
 }
 
 #login:hover,
 #signup:hover {
-  box-shadow: 0 0 20px 10px rgb(217, 233, 217);
+  border: 1px solid #313131;
+  box-shadow: 0 0 15px 10px rgb(217, 233, 217);
 }
 
 .hide {

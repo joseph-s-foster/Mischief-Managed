@@ -15,7 +15,7 @@ main {
 
 .title {
   font-weight: normal;
-  padding-top: 3%;
+  padding-top: 6%;
   padding-bottom: 2%;
   font-size: 5rem;
   color: #ffbf00;
@@ -204,7 +204,7 @@ input[type="password"]::placeholder {
 .book-cover {
   width: 75%;
   border-radius: 10px;
-  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
+  /* box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2); */
   transition: transform 0.2s;
 }
 
@@ -227,7 +227,7 @@ input[type="password"]::placeholder {
 }
 
 .logout {
-  height: 54px;
+  height: 48px;
   font-size: 1.5rem;
   font-weight: bold;
   border: none;
@@ -371,7 +371,7 @@ display: none;
 }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 650px) {
 .footer {
   display: none;
 }

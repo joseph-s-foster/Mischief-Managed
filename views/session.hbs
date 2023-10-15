@@ -1,11 +1,16 @@
+<header>
+  <h1 class="title-secondary">Select a Book</h1>
+</header>
+<div class="spacing border-top"></div>
 <div class="books">
   {{#each books}}
     <div>
-      <a href="/display/{{id}}" class = "custom-cursor">
+      <a href="/display/{{id}}" class="custom-cursor">
         <img class="book-cover" src="{{image}}" alt="{{title}} book cover" />
       </a>
     </div>
   {{/each}}
 </div>
+<div class="spacing border-bottom"></div>
 
-<script src='/js/logout.js'></script>
+<script src="/js/logout.js"></script>

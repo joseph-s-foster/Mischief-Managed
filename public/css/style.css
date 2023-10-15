@@ -1,10 +1,18 @@
 body {
   font-family: "Bigelow Rules", cursive;
   font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  background-color: #000;
 }
 
 .title {
-  padding-top: 2%;
+  padding-top: 5%;
   padding-bottom: 2%;
   font-size: 8rem;
   color: #ffbf00;
@@ -13,12 +21,58 @@ body {
   z-index: 1000;
 }
 
-.fixed-image {
-  position: fixed;
-  z-index: -1000;
-  height: 100%;
-  width: 100%;
+.title-secondary {
+  padding-top: 8%;
+  padding-bottom: 2%;
+  font-size: 5rem;
+  color: #ffbf00;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
 }
+
+.spacing {
+  padding: 16px; /* Adjust the top and bottom padding as needed */
+  width: 96%;
+  margin: 0 auto;
+}
+
+.border-top {
+  border-top: 2px solid #ffbf00;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #ffbf00;
+}
+
+.footer {
+  font-size: 2rem;
+  color: #ffbf00;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding-bottom: 1%;
+  width: 100%;
+  text-align: center;
+  position: fixed; /* Fix the footer to the bottom */
+  bottom: 0; /* Stick the footer to the bottom of the viewport */
+}
+
+/* .fixed-image {
+  z-index: -1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 1;
+} */
+
 
 .container {
   display: flex;
@@ -142,7 +196,7 @@ input[type="password"]::placeholder {
 }
 
 .books {
-  margin-top: 30px;
+  margin-left: 3%;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -166,19 +220,6 @@ input[type="password"]::placeholder {
   border-radius: 10px;
   box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
   transition: transform 0.2s;
-}
-.tooltip {
-  font-size: 14px;
-  font-family: sans-serif;
-  position: absolute;
-  display: none;
-  background: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 100; /* Make sure it has a higher z-index */
-  opacity: 0;
-  transition: opacity 0.2s;
 }
 
 /* Apply the hover effect to the parent element */
@@ -292,6 +333,33 @@ input[type="password"]::placeholder {
   letter-spacing: 0.2px;
   font-family: Roboto;
   user-select: none;
+}
+#milestone {
+  font-family: "Risque", sans-serif;
+  display: flex;
+  color: white;
+  background-color: rgb(9, 61, 49);
+  border: 2px solid #ffbf00;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px limegreen;
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  justify-content: space-between;
+}
+.clr {
+  font-family: "Risque", sans-serif;
+  color: white;
+  background-color: rgb(11, 63, 54, 0.7);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgb(59, 172, 243);
+  transition: transform 0.2s ease-in-out;
+  font-size: 30px;
+  width: 50%; /* Adjust the width as needed */
+  height: auto;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {

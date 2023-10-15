@@ -1,6 +1,5 @@
 const triviaContainer = document.querySelector(".trivia");
 const fetchedTrivia = {}; // Object to store fetched trivia data
-
 const handleMilestone = async (e) => {
   const milestone = e.target.value;
   const book_id = document.querySelector("#book-id").value;
@@ -42,6 +41,9 @@ const handleMilestone = async (e) => {
       triviaContainer.appendChild(elem);
     }
   }
+
+  triviaContainer.appendChild(elem);
+}
 };
 
 document.querySelector("#milestone").addEventListener("change", handleMilestone);

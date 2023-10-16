@@ -340,6 +340,10 @@ input[type="password"]::placeholder {
   justify-content: space-between;
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .books {
     width: 75%;

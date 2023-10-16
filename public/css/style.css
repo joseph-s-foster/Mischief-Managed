@@ -1,5 +1,5 @@
 body {
-  font-family: "Bigelow Rules", cursive;
+  font-family: "Garamond", sans-serif;
   font-size: 2rem;
   margin: 0;
   display: flex;
@@ -15,9 +15,9 @@ main {
 
 .title {
   font-weight: normal;
-  padding-top: 2%;
-  padding-bottom: 1%;
-  font-size: 8rem;
+  padding-top: 6%;
+  padding-bottom: 2%;
+  font-size: 5rem;
   color: #ffbf00;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@ main {
   font-weight: normal;
   padding-top: 8%;
   padding-bottom: 2%;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #ffbf00;
   display: flex;
   justify-content: center;
@@ -52,13 +52,12 @@ main {
 .footer {
   font-weight: normal;
   position: absolute;
-  bottom: 2%;
-  font-size: 1.75rem;
+  bottom: 0;
+  font-size: 1.25rem;
   color: #ffbf00;
   text-align: center;
   padding: 8px;
   width: 100%;
-  background-color: #000; /* Adjust background color as needed */
 }
 
 .container {
@@ -116,8 +115,8 @@ main {
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
   color: #504f4f;
-  font-family: "Bigelow Rules", sans-serif;
-  font-size: 2.5rem;
+  font-family: "Garamond", sans-serif;
+  font-size: 2rem;
   padding-top: 7px;
 }
 
@@ -134,7 +133,7 @@ input[type="password"]::placeholder {
 
 #login,
 #signup {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   height: 54px; /* Adjust height to match the input field */
   padding: 10px; /* Adjust padding for vertical centering */
@@ -203,9 +202,9 @@ input[type="password"]::placeholder {
 }
 
 .book-cover {
-  width: 75%;
+  width: 85%;
   border-radius: 10px;
-  box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2);
+  /* box-shadow: 4px 4px 7px rgba(232, 229, 229, 0.2); */
   transition: transform 0.2s;
 }
 
@@ -223,13 +222,13 @@ input[type="password"]::placeholder {
 
 #logout {
   position: absolute;
-  top: 4%; /* Adjust this value to position the button from the top */
-  right: 2%; /* Adjust this value to position the button from the right */
+  top: 28px; /* Adjust this value to position the button from the top */
+  right: 28px; /* Adjust this value to position the button from the right */
 }
 
 .logout {
-  height: 54px;
-  font-size: 2.5rem;
+  height: 48px;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -344,6 +343,9 @@ input[type="password"]::placeholder {
   max-height: 300px;
 }
 
+.hide {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   .books {
@@ -358,21 +360,26 @@ input[type="password"]::placeholder {
   .title-secondary {
     justify-content: left;
     padding: 2%;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   
   .logout {
     height: 32px;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   #logout {
     position: absolute;
-    top: 2%; /* Adjust this value to position the button from the top */
-    right: 6%; /* Adjust this value to position the button from the right */
+    top: 12px; /* Adjust this value to position the button from the top */
+    right: 12px; /* Adjust this value to position the button from the right */
   }
   .footer {
-    position: relative;
-    font-size: 1.25rem;
-  }
+display: none;
+}
+}
+
+@media screen and (max-height: 650px) {
+.footer {
+  display: none;
+}
 }

@@ -325,6 +325,7 @@ input[type="password"]::placeholder {
   transition: transform 0.2s ease-in-out;
   font-size: 30px;
   justify-content: space-between;
+  margin-right: 10px;
 }
 .clr {
   font-family: "Risque", sans-serif;
@@ -332,14 +333,17 @@ input[type="password"]::placeholder {
   background-color: rgb(11, 63, 54, 0.7);
   border: 2px solid white;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px; /* Adjust the padding values as needed */
   box-shadow: 0 0 20px rgb(59, 172, 243);
   transition: transform 0.2s ease-in-out;
-  font-size: 30px;
-  width: 50%; /* Adjust the width as needed */
+  font-size: 20px; /* Adjust the font size as needed */
+  width: auto; /* Adjust the width as needed */
   height: auto;
   justify-content: space-between;
+  max-width: 300px;
+  max-height: 300px;
 }
+
 
 @media screen and (max-width: 768px) {
   .books {

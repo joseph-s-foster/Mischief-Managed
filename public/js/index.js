@@ -9,8 +9,3 @@ function pauseAndPlay() {
 
 window.addEventListener("load", pauseAndPlay);
 
-
-const singleAudio = document.getElementById('singleAudio');
-window.addEventListener('load', () => {
-    singleAudio.play();
-});
